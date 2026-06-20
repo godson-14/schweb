@@ -1,0 +1,82 @@
+# Deploy EduText Hub to Vercel - Complete Guide
+
+## What You Need (Free)
+- GitHub account: https://github.com/signup
+- Vercel account: https://vercel.com (sign in with GitHub)
+- Git installed: https://git-scm.com/download/win
+
+---
+
+## Automatic Setup (Easiest)
+
+1. **Install Git first** from: https://git-scm.com/download/win
+   - Use default settings
+   - Restart PowerShell after install
+
+2. **Create a GitHub account** (free): https://github.com/signup
+
+3. **Create a repository on GitHub:**
+   - Go to: https://github.com/new
+   - Name: `edutext-hub`
+   - Click "Create repository"
+
+4. **In your project folder, double-click:**
+   ```
+   setup-github.bat
+   ```
+   - It will ask for your GitHub username and email
+   - It will ask for the repository URL (copy from GitHub)
+   - It will automatically push your code!
+
+5. **Go to Vercel:** https://vercel.com
+   - Sign up with GitHub
+   - Click "Import Project"
+   - Select `edutext-hub`
+   - Click "Deploy"
+   - **Done!** Your app is live!
+
+---
+
+## Manual Setup (If batch file doesn't work)
+
+**In PowerShell:**
+
+```powershell
+cd "c:\Users\user\Desktop\ifechi work folder\personal work\ongoing"
+
+git init
+git add .
+git commit -m "Initial commit: EduText Hub"
+git branch -M main
+
+# After creating repo on GitHub, run:
+git remote add origin https://github.com/YOUR_USERNAME/edutext-hub.git
+git push -u origin main
+```
+
+Replace `YOUR_USERNAME` with your actual GitHub username.
+
+---
+
+## Vercel Deployment
+
+Once code is on GitHub:
+
+1. Go to https://vercel.com
+2. Click "Sign Up" → "Continue with GitHub"
+3. Authorize access
+4. Click "Import Project"
+5. Select `edutext-hub`
+6. Click "Deploy"
+7. Wait 30-60 seconds
+8. Get your live URL!
+
+---
+
+## Your App Will Be At:
+```
+https://edutext-hub.vercel.app
+```
+(or whatever name Vercel assigns)
+
+All files are ready. Just follow the 5 steps above!
