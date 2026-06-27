@@ -415,7 +415,14 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'ongoing.html'));
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+// Only open a local listener port if NOT running inside Vercel's production environment
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => {
+    console.log(`Server running locally at http://localhost:${port}`);
+  });
+}
+
+// CRITICAL STEP: Export the Express app module so Vercel can manage the routing paths
+module.exports = app;
+
