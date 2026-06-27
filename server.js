@@ -1,20 +1,5 @@
 const express = require('express');
 const path = require('path');
-const express = require('express');
-const app = express();
-const path = require('path');
-
-// 1. Tell Node/Express to serve files in the root folder as static assets
-app.use(express.static(__dirname));
-
-// 2. Route the main landing page to your ongoing.html file
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'ongoing.html'));
-});
-
-// Your existing authentication, textbook, and activity APIs continue below...
-
-
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
@@ -415,14 +400,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'ongoing.html'));
 });
 
-// Only open a local listener port if NOT running inside Vercel's production environment
-if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
-  const port = process.env.PORT || 3000;
-  app.listen(port, () => {
-    console.log(`Server running locally at http://localhost:${port}`);
-  });
-}
-
-// CRITICAL STEP: Export the Express app module so Vercel can manage the routing paths
-module.exports = app;
-
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
