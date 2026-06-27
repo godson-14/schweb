@@ -8,6 +8,10 @@
     {
       "src": "ongoing.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "ongoing.css",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -18,6 +22,10 @@
     {
       "src": "/(.*)",
       "dest": "ongoing.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "ongoing.css"
     }
   ],
   "env": {
