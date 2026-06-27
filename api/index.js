@@ -108,7 +108,7 @@ const exams = [
     title: 'Primary Science Quiz',
     questions: [
       { question: 'Which of these is a plant?', options: ['Cat', 'Tree', 'Car', 'Dog'], answer: 'Tree' },
-      { question: 'What does a seed need to grow?', options: ['Sunlight', 'Salt', 'Plastic', 'Noise'], answer: 'Sunlight' },
+      { question: 'What does a tree need to grow?', options: ['Sunlight', 'Salt', 'Plastic', 'Noise'], answer: 'Sunlight' },
       { question: 'What shape has 4 equal sides?', options: ['Triangle', 'Square', 'Circle', 'Rectangle'], answer: 'Square' },
       { question: 'Which season is rainy?', options: ['Winter', 'Summer', 'Rainy', 'Autumn'], answer: 'Rainy' }
     ]
